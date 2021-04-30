@@ -5,7 +5,7 @@ import resolvers from "./graphql/resolvers";
 
 env.config();
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, resolvers, playground: true });
 
 server
   .listen({ port: process.env.PORT })
